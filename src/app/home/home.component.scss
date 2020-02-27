@@ -1,0 +1,266 @@
+.logo {
+    position: absolute;
+    z-index: 1040;
+    display: block;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-logo {
+    max-width: 170px;
+    max-height: 140px;
+}
+
+.navbar {
+    position: absolute;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Cormorant Unicase', serif;
+    font-style: normal;
+    font-size: 13px;
+    z-index: 1000;
+    width:100%;
+    padding-left: 28%;
+    // padding-right: 15%;
+    display:flex;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    box-shadow: none !important;
+
+    .nav-link {
+        color: #FFFFFF;
+    }
+
+    .nav-link:hover{
+        color:rgba(255, 255, 255, 0.2);
+    }
+
+    .languages{
+        display:flex;
+
+
+        .btn-lan{
+            width:27px;
+            padding:2px;
+            background-color: #0E121B;
+
+        }
+    }
+
+}
+
+
+.title {
+    z-index: 50;
+    text-align: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 70%;
+    height: 30%;
+    top: 40%;
+
+    .restaurant {
+        z-index: 50;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        padding-bottom: 5%;
+
+    }
+
+
+}
+
+.rectangle {
+    width: 30%;
+    height: 3%;
+    text-align: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 50;
+
+    background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%);
+    border-radius: 50px;
+}
+
+.block {
+    height: 100%;
+    width: 100%;
+    padding: 4%;
+    background-color: white;
+    display: flex;
+
+    .about {
+        text-align: center;
+        width: 50%;
+
+        .img {
+            margin-top: -5%;
+
+            img {
+                width: 500px;
+                height: 400px;
+            }
+        }
+
+    }
+
+    h2 {
+        margin-bottom: 0%;
+    }
+
+    .stick {
+        width: 10%;
+        height: 1%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1%;
+        left: 0;
+        right: 0;
+
+        background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%);
+        border-radius: 50px;
+    }
+}
+
+.block-chief {
+    height: 100%;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+
+    // .center-text{
+    //     padding-top:10%; 
+    //  }
+
+    .flex{
+        display: flex;
+    }
+
+
+    .about {
+        text-align: center;
+        width: 50%;
+        color: #FFFFFF;
+
+        .img {
+            img {
+                width: 500px;
+                height: 400px;
+            }
+        }
+
+    }
+
+    h2 {
+        margin-bottom: 0%;
+    }
+
+    .stick {
+        width: 10%;
+        height: 1%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1%;
+        left: 0;
+        right: 0;
+
+        background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%);
+        border-radius: 50px;
+    }
+}
+
+
+.block-events {
+    height: 100%;
+    width: 100%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    background-color: white;
+
+    .flex{
+        display: flex;
+    }
+
+    .about {
+        text-align: center;
+        width: 50%;
+        color: #FFFFFF;
+
+        .img {
+            padding-top: 2%;
+            margin-left: 8%;
+
+            img {
+                width: 500px;
+                height: 400px;
+            }
+        }
+
+    }
+
+    h3 {
+        color: black;
+        text-align: center;
+    }
+}
+
+.block-photo {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 3px;
+    background-color: #FFFFFF;
+
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.down-bar {
+    display: flex;
+    background: #0E121B;
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Cabin', sans-serif;
+
+    .text{
+        padding-left:40%;
+        text-align: center;
+    }
+    .social{
+        padding: 10px;
+        margin-left:auto;
+        margin-right:0;
+
+        i{
+            width:25px;
+            height:25px;
+        }
+    }
+}
+
+#map{
+    width: 100%;
+    height: 300px;
+}

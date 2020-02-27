@@ -1,0 +1,373 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg shadow-none navbar-dark fixed-top">
+  <mdb-navbar-brand>
+    <a class="navbar-brand disabled" style="opacity: 0;">Navbar</a>
+  </mdb-navbar-brand>
+  <links>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная <span
+          class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
+      <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Галерея</a>
+      <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать</a>
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('ru')">
+            ru
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('en')">
+            en
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('kz')">
+            kz
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('ch')">
+            ch
+          </a>
+        </li>
+      </ul>
+    </div>
+  </links>
+</mdb-navbar>
+
+<div id="nav" class="navbar shadow-none navbar-dark">
+  <div style="display: flex;">
+    <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная <span
+        class="sr-only">(current)</span></a>
+    <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
+  </div>
+  <div style="display: flex;">
+    <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Галерея</a>
+    <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать</a>
+  </div>
+
+  <div class="languages">
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('ru')">ru</button>
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('en')">en</button>
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('kz')">kz</button>
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('ch')">ch</button>
+  </div>
+
+
+</div>
+
+<div class="logo">
+  <img class="img-logo" src="assets/logos/Logotype_main.gif">
+</div>
+<mdb-carousel class="carousel slide carousel-fade animated fadeIn" [animation]="'fade'">
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-12.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-3.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-4.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-5.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-6.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-7.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-8.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-9.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-10.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="assets/img/Desktop-11.png" alt="Slide">
+      <div class="mask mask waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+
+<div class="title animated zoomIn">
+  <div class="restaurant">
+    <h3>RESTAURANT</h3>
+  </div>
+  <div class="restaurant">
+    <h1>Millionaire</h1>
+  </div>
+  <div class="rectangle"></div>
+
+</div>
+
+<div class="block">
+  <div class="about">
+    <h2>О нас</h2>
+    <div class="stick"></div>
+    <ng-container *ngIf="language=='ru'">
+      <p> Millionaire – это больше, чем ресторанный комплекс. Это стиль жизни!
+        Приготовьтесь погрузиться в непревзойденный мир ресторана и караоке с невероятным звуковым оснащением ,
+        красочной
+        шоу-программой и обслуживанием мирового уровня.
+        Мillionaire несомненно, является идеальным местом для бизнес-встреч, семейных мероприятий, корпоративных
+        ивентов,
+        закрытых вечеринок и караоке-вечеров.
+        Роскошный ресторанный комплекс также предлагает множество первоклассных удобств, от отмеченных наградами
+        миксологов до эксклюзивного высококачественного шеф-повара и гастро-шедевров бренд шеф-повара, предлагая
+        непревзойденный и уникальный опыт, как никто другой.
+      </p>
+    </ng-container>
+    <ng-container *ngIf="language=='en'">
+      <p>
+        Millionaire is more than a restaurant complex. It is a lifestyle!
+        Get ready to dive into the unsurpassed world of restaurant and karaoke with incredible sound, colorful show
+        program and world-class service.
+        Millionaire is undoubtedly the perfect venue for business meetings, family and corporate events, private parties
+        and karaoke nights.
+        As well, luxury restaurant complex offers a host of first-class amenities, from award-winning mixologists to
+        exclusive high-end chef and brand chef’s gastro masterpieces. We offer you an unrivaled and unique experience
+        that
+        you hardly find somewhere else.
+      </p>
+
+    </ng-container>
+    <ng-container *ngIf="language=='kz'">
+      <p>
+        «Millionaire» – бұл мейрамхана кешенінен артығырақ. Бұл өмір салты!
+        Керемет дыбыстық жабдықталған караокемен, түрлі-түсті шоу-бағдарламамен және әлемдік деңгейдегідей қызмет
+        көрсететін мейрамхананың таңғажайып әлеміне енуге дайын болыңыз.
+        «Мillionaire», әрине, бизнес-кездесулер, отбасылық іс-шаралар, корпоративті іс-шаралар, жеке кештер мен караоке
+        кештерін өткізу үшін өте қолайлы орын болып табылады.
+        Сонымен қатар, сәнді мейрамханалар кешені басқаларға ұқсамайтын үздік және бірегей тәжірибесімен бірге,
+        миксологтардан бастап эксклюзивті жоғары сапалы бас аспаздың және мейрамхана жауһарларының марапаттарына ие
+        болған
+        бас аспаздың брендісі мен көптеген жоғары дәрежедегі жайлылықты ұсынады.
+      </p>
+
+    </ng-container>
+    <ng-container *ngIf="language=='ch'">
+      <p> Millionaire百万富翁不仅仅是一个的餐馆综合馆,更是一种生活方式!
+        准备好潜入无与伦比的世界餐厅和卡拉OK,拥有令人难以置信的音响设备,丰富多彩的节目和世界级的服务。
+        百万富翁无疑是举行商务会议、家庭和企业活动、私人晚会和卡拉OK之夜的完美场所。豪华餐馆综合馆还提供甲级的设施,获奖调酒师，
+        高端厨师和品牌厨师的美食杰作,也提供无与伦比的独特体验。</p>
+    </ng-container>
+
+  </div>
+  <div class="about">
+    <div class="img">
+      <img src="assets/img/about.png">
+    </div>
+  </div>
+</div>
+
+<div class="block-chief" style="background-image: url(assets/img/our_team-bg.png);">
+  <h3>Бренд - шеф повар</h3>
+
+  <div class="flex">
+    <div class="about">
+      <div class="img">
+        <img src="assets/img/chief.png">
+      </div>
+    </div>
+
+    <div class="about center-text">
+      <h2>ШЕФ - ПОВАР</h2>
+      <div class="stick"></div>
+      <ng-container *ngIf="language=='ru'">
+        <p>Бренд Шеф-повар Никита Кузьменко представил свою авторскую кухню и рассказал о ее концепции:
+
+          "Мой первый раз в Нур-Султане ввел меня в тупик. Я обошёл все рынки, супермаркеты и рестораны и понял, что
+          люди
+          любят простую и понятную еду, хотя Мы с су-шефами в Москве стараемся делать что-то, чего не делал ещё никто,
+          что-то, от чего взрывается мозг. И увидев название нашего проекта «MILLIONAIRE», вдруг пришла идея внести
+          что-то
+          новое, яркое и необычное, но сохранив при этом доступность и приемлемость для местных жителей.Мы разработали
+          нестандартное меню в стиле “Contemporary food”, где простой продукт превращается в уникальное
+          блюдо, со своей историей и концепцией.
+
+          Посуда в ресторане не обязательно должна быть серебряной, но повар должен быть золотой. Поэтому Мы пригласили
+          нашего золотого коллегу из Москвы - Давида Дзанагова, который будет преподносить и передавать мою мысль на
+          тарелку, следить за каждой деталью и ноткой вкуса.
+
+          Что мы хотели донести нашим меню? Мы хотим, чтобы наши гости уходили не только сытыми, а счастливыми в первую
+          очередь.
+          Мы с моей командой будем дарить своим посетителям удовольствие и вкус к хорошей кухне. Ведь кулинария – это
+          язык, с помощью которого можно передать гармонию, счастье, красоту, сложность, поэзию, волшебство, юмор,
+          провокацию, культуру – в общем, все, из чего складывается наша жизнь."
+          Приглашаем Вас посетить наш ресторанный комплекс "MILLIONAIRE"и отведать авторские блюда приготовленные Бренд
+          Шеф-поваром Никитой Кузьменко и Шеф-поваром Давидом Дзанагова.</p>
+      </ng-container>
+      <ng-container *ngIf="language=='en'">
+        <p>
+          Brand Chef Nikita Kuzmenko presented his original cuisine and told about its concept:
+          “My first time in Nur-Sultan was a dead end. I took all the markets, supermarkets and restaurants and realized
+          that people like simple and clear food, though Me and the sous-chefs in Moscow are always trying to cook
+          something that no one else has ever cooked, something that blows the mind. So, when I saw the name of our
+          project - ‘MILLIONAIRE’, I took up the idea that we might make something new, bright and unusual, but still
+          accessible and acceptable to local people.
+          We have developed a non-standard menu in the style of ‘Contemporary food’, where a simple product turns into a
+          unique meal with its own history and concept.
+          Dishes in the restaurant do not have to be silver, but the cook should have golden hands.
+          Therefore, we invited our colleague with golden hands from Moscow - David Dzanagov, who will present and
+          convey my idea on the plate, watch every detail and note of taste.
+          What was the main idea of our menu? We want our guests to leave our restaurant both full-up, and happy - first
+          of all.
+          My team and I will give pleasure and taste for good cuisine to our visitors. After all, cooking is a language
+          that helps to convey harmony, happiness, beauty, complexity, poetry, magic, humor, provocation, culture - just
+          everything that makes up our life.
+          We invite you to visit our ‘MILLIONAIRE’ restaurant complex and enjoy original cuisine of our Brand Chef
+          Nikita Kuzmenko and Chef David Dzanagov.”
+
+        </p>
+      </ng-container>
+      <ng-container *ngIf="language=='kz'">
+        <p>Бренд бас - аспаз Никита Кузьменко өзінің авторлық асын ұсынды және оның тұжырымдамасы туралы әңгімеледі:
+
+          Мен Нұр Сұлтанда алғаш рет тұйыққа тірелдім. Мен біз Мәскеудегі суши-шефтермен әлі ешкім жасамаған, айырықша
+          керемет нәрсені жасауға тырысқанмен, барлық базарларды, супермаркеттер мен мейрамханаларды аралап шығып,
+          адамдардың қарапайым және көз үйренген түсінікті тағамды ұнататынын түсіндім.
+
+          Біздің «MILLIONAIRE» жобасының атауын көргенде, жергілікті тұрғындар үшін қолжетімділікті және тиімділікті
+          сақтай отырып, жаңа, жарқын және ерекше бірдеңені енгізу идеясы кенеттен пайда болды.
+
+          Біз “Contemporary food» стиліндегі стандартты емес мәзірді жасадық, онда қарапайым азық-түлік өзіндік тарихы
+          мен тұжырымдамасы бар ерекше тағамға айналады.
+
+          Мейрамханада күміс ыдыс-аяқтың болғаны міндетті емес, ал алтын аспазшының болғаны қажет. Сондықтан біз
+          Мәскеуден алтын әріптесімізді - Давид Дзанаговты шақырдық, ол менің ойымдағыны тәрелкеге салып, ұсынады және
+          әр тағамның ерекше дәмді болуын бақылайды.
+
+          Біз мәзірімізбен нені ұсынғымыз келді? Біз қонақтарымыздың тек тамаққа тойып қана емес, ең алдымен, бақытты
+          болып кеткенін қалаймыз.
+
+          Біз тобымызбен бірге мейрамханаға келгендерге жақсы асқа деген талғампаздық және оны сүйсініп жеу қуанышын
+          сыйлаймыз. Өйткені аспаздық – бұл тіл, оның көмегімен жалпы, біздің өмірімізден тұратынның барлығын -
+          үйлесімділікті, бақытты, сұлулықты, күрделілікті, поэзияны, ғажайыпты, әзілді, арандатушылықты, мәдениетті
+          ұсынуға болады.
+
+          Сіздерді біздің "MILLIONAIRE" мейрамхана кешеніне келуге және бренд бас - аспаз Никита Кузьменко мен бас аспаз
+          Давид Дзанагов дайындаған авторлық тағамдардың дәмін татуға шақырамыз.
+
+        </p>
+      </ng-container>
+      <ng-container *ngIf="language=='ch'">
+        高端厨师Nikita Kuzmenko给我们介绍了他做的饭，还谈论了它的构想:
+        我第一次来努尔苏丹是个死胡同。我逛了所有的集市，超市和馆子,发现人们喜欢简单明了的食物,尽管在莫斯科我和副厨师总是想做别人从未做过的东西,让大脑为之一振。所以,当我看到我们的‘百万富翁’项目的名字时,我就有了这样的想法:我们可能会做出一些新的、明亮的和不寻常的东西,但仍然可以被当地居民接受和受欢迎。
+        我们用当代食物‘Contemporary food’的风格开发了一个非标准的菜单,将其中一个简单食物融入了自己的历史和概念。餐馆里的餐具不一定是银制的,但厨师的手应该是金色的。因此,我们邀请了来自莫斯科的金手David
+        Dzanagov,他将在盘子上展示并传达我的想法,观察每一个细节和品味。我们想通过我们的菜单传达什么思想?我们希望我们的客人高开时不仅吃得好,而且主要是高兴。我的团队会给我们的客人带来美味佳看的乐趣。毕竞,烹饪是一种语言,它有助于传达和谱、幸福、美丽、复杂、诗歌、魔力、幽默、挑战、文化,所有我们生活构成的东西。
+        高端厨师Nikita Kuzmenko给我们介绍了他做的饭，还谈论了它的构想:
+        我第一次来努尔苏丹是个死胡同。我逛了所有的集市，超市和馆子,发现人们喜欢简单明了的食物,尽管在莫斯科我和副厨师总是想做别人从未做过的东西,让大脑为之一振。所以,当我看到我们的‘百万富翁’项目的名字时,我就有了这样的想法:我们可能会做出一些新的、明亮的和不寻常的东西,但仍然可以被当地居民接受和受欢迎。
+        我们用当代食物‘Contemporary food’的风格开发了一个非标准的菜单,将其中一个简单食物融入了自己的历史和概念。餐馆里的餐具不一定是银制的,但厨师的手应该是金色的。因此,我们邀请了来自莫斯科的金手David
+        Dzanagov,他将在盘子上展示并传达我的想法,观察每一个细节和品味。我们想通过我们的菜单传达什么思想?我们希望我们的客人高开时不仅吃得好,而且主要是高兴。我的团队会给我们的客人带来美味佳看的乐趣。毕竞,烹饪是一种语言,它有助于传达和谱、幸福、美丽、复杂、诗歌、魔力、幽默、挑战、文化,所有我们生活构成的东西。
+
+
+      </ng-container>
+
+
+    </div>
+
+  </div>
+</div>
+
+<div class="block-events">
+  <h3>Частные мероприятия</h3>
+  <div class="flex">
+    <div class="about">
+      <div class="img">
+        <img src="assets/img/wedings.png">
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="img">
+        <img src="assets/img/events.png">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="block-photo">
+  <img src="assets/img/Photo Galerie.png" alt="">
+</div>
+
+<div id="map"></div>
+
+<div class="down-bar">
+  <div class="text">
+    <p>Адрес: Мәңгілік Ел проспект, 54
+    <br>
+    Телефон: +77715555549
+  </p>
+  </div>
+  
+  <div class="social"> 
+    <a href="https://www.instagram.com/millionaire.astana/?igshid=1m8bihzes5uk3">
+      <img src="assets/icons/instagram.svg" width="30px" height="30px">
+    </a>
+
+  </div>
+  
+</div>

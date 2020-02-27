@@ -1,0 +1,287 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
+
+.navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(14, 18, 27, 0.5);
+    font-family: 'Cormorant Unicase', serif;
+    text-align: center;
+}
+
+mdb-navbar {
+    display: none;
+}
+
+
+.mask {
+    background: linear-gradient(0deg, rgba(14, 18, 27, 0.6), rgba(14, 18, 27, 0.6));
+}
+
+
+body {
+    // font-family: 'Cormorant Unicase', serif;
+    background-color: #0E121B;
+
+    p {
+        font-family: 'Cabin', sans-serif;
+    }
+
+}
+
+h1 {
+    font-family: 'Cormorant Unicase', serif;
+    font-style: normal;
+    font-size: 96px;
+    line-height: 0px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'Cormorant Unicase', serif;
+
+}
+
+h3 {
+    font-family: 'Cormorant Unicase', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-link {
+        background-color: rgba(14, 18, 27);
+    }
+
+
+    mdb-navbar-brand {
+        padding-right: 0;
+    }
+
+    mdb-navbar {
+        display: block;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    .img-logo {
+        display: none;
+    }
+
+    .title {
+        top: 10% !important;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 7px;
+        }
+    }
+
+    .rectangle {
+        height: 2% !important;
+    }
+
+    .block {
+        display: block !important;
+
+        .stick {
+            height: 3px !important;
+        }
+
+        .about {
+            width: 100% !important;
+            padding: 0;
+
+
+
+            img {
+                width: 350px !important;
+                height: 172px !important;
+            }
+        }
+    }
+
+    .block-chief {
+
+        .flex {
+            display: block !important;
+        }
+
+        .stick {
+            height: 3px !important;
+        }
+
+        .center-text {
+            padding-top: 0;
+        }
+
+        .about {
+            width: 100% !important;
+            padding: 0;
+
+
+
+            img {
+                width: 350px !important;
+                height: 270px !important;
+            }
+        }
+    }
+
+    .block-events {
+        .flex {
+            display: block !important;
+        }
+
+        .about {
+            width: 100% !important;
+            padding: 0;
+
+            img {
+                width: 350px !important;
+                height: 270px !important;
+                margin-left: -2% !important;
+            }
+        }
+
+        .about:first-child {
+            margin: 0 !important;
+        }
+    }
+
+    .down-bar {
+        height: 50px !important;
+        font-size: 10px !important;
+    }
+
+    #map {
+        height: 200px !important;
+    }
+
+    #list {
+        width: 80% !important;
+    }
+
+    .menu {
+        top: 10% !important;
+    }
+
+    .mar-top {
+        margin-top: 35% !important;
+    }
+
+    .types {
+        margin-top: 35% !important;
+
+        .type {
+            font-size: 4.5px !important;
+            padding-left: 2px !important;
+            padding-right: 2px !important;
+        }
+    }
+
+    .flex-res {
+        padding-top: 30% !important;
+        display: block !important;
+
+    }
+
+    figure {
+        width: 320px !important;
+        height: 220px !important;
+        background-color: rgba(14, 18, 27);;
+    }
+
+    .rect {
+        display: none !important;
+    }
+
+    .rect2 {
+        display: none !important;
+    }
+
+    .flex {
+        display: block !important;
+        padding-bottom: 3%;
+
+        .block-btns {
+            padding-left: 15% !important;
+            margin-top: 0 !important;
+        }
+
+        .block-btns:first-child {
+            margin-top: 45% !important;
+        }
+    }
+
+    .snip0015 {
+        display: none;
+    }
+
+    .adaptive-btn {
+        display: block !important;
+    }
+
+    .adaptive-btn-top {
+        margin-top: 50% !important;
+    }
+
+    .forma {
+        margin-top: 45% !important;
+
+        input {
+            width: 240px !important;
+            margin-bottom: 2px !important;
+        }
+
+        .submit {
+            margin-left: 6% !important;
+            margin-bottom: 5% !important;
+            margin-top: -6% !important;
+
+        }
+
+        .icon {
+            padding-left: 29% !important;
+        }
+
+        .center {
+            margin-left: 0 !important;
+        }
+
+        .left {
+            margin-left: 0 !important;
+        }
+        .left-date {
+            margin-left: 0 !important;
+        }
+    }
+
+
+}
+
+
+.carousel-inner {
+    max-height: 60% !important;
+    img {
+    max-height: 60% !important;
+    } 
+}

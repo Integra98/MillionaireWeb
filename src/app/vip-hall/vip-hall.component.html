@@ -1,0 +1,109 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg shadow-none navbar-dark fixed-top">
+  <mdb-navbar-brand>
+    <a class="navbar-brand disabled" style="opacity: 0;">Navbar</a>
+  </mdb-navbar-brand>
+  <links>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная </a>
+      <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
+      <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Галерея</a>
+      <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать <span
+          class="sr-only">(current)</span></a>
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('ru')">
+            ru
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('en')">
+            en
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('kz')">
+            kz
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" (click)="changeLanguage('ch')">
+            ch
+          </a>
+        </li>
+      </ul>
+    </div>
+  </links>
+</mdb-navbar>
+
+<div id="nav" class="navbar shadow-none navbar-dark">
+  <div style="display: flex;">
+    <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная </a>
+    <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
+  </div>
+  <div style="display: flex;" class="nav-half">
+    <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Галерея</a>
+    <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать <span
+        class="sr-only">(current)</span></a>
+  </div>
+
+  <div class="languages">
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('ru')">ru</button>
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('en')">en</button>
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('kz')">kz</button>
+    <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('ch')">ch</button>
+  </div>
+
+
+</div>
+<div class="logo">
+  <img class="img-logo" src="assets/logos/Logotype_main.gif">
+</div>
+
+<div class="menu">
+  <h2>БРОНИРОВАНИЕ СТОЛИКА</h2>
+  <div class="stick"></div>
+</div>
+
+<div class="block" style="margin-top: 18%;">
+  <figure class="snip0015" *ngFor="let hall of hall1">
+    <a href="payment.php">
+      <img src="{{hall.img}}" width="250px" height="150px" />
+      <figcaption>
+        <h2>Зал <br> <span>{{hall.title}}</span></h2>
+        <p>{{hall.places}} мест</p>
+      </figcaption>
+    </a>
+  </figure>
+
+  <div class="adaptive-btn adaptive-btn-top">
+    <div class="vip-btns">
+      <a class="icon" *ngFor="let hall of hall1">
+        <h5>{{hall.title}}</h5>
+        <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<div class="block">
+  <figure class="snip0015" *ngFor="let hall of hall2">
+    <a href="payment.php">
+      <img src="{{hall.img}}" width="250px" height="150px" />
+      <figcaption>
+        <h2>Зал <br> <span>{{hall.title}}</span></h2>
+        <p>{{hall.places}} мест</p>
+      </figcaption>
+    </a>
+  </figure>
+
+  <div class="adaptive-btn">
+    <div class="vip-btns">
+      <a class="icon" *ngFor="let hall of hall2">
+        <h5>{{hall.title}}</h5>
+        <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
+      </a>
+    </div>
+  </div>
+</div>
