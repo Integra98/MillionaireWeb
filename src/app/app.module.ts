@@ -8,9 +8,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MenuComponent } from './menu/menu.component';
 import { GaleryComponent } from './galery/galery.component';
 import { ReservComponent } from './reserv/reserv.component';
-import { PublicHallComponent } from './public-hall/public-hall.component';
 import { VipHallComponent } from './vip-hall/vip-hall.component';
-import { FormaComponent } from './forma/forma.component';
 
 
 @NgModule({
@@ -20,9 +18,7 @@ import { FormaComponent } from './forma/forma.component';
     MenuComponent,
     GaleryComponent,
     ReservComponent,
-    PublicHallComponent,
-    VipHallComponent,
-    FormaComponent
+    VipHallComponent
   ],
   imports: [
     BrowserModule,
