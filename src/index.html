@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Millionaire</title>
@@ -12,21 +13,25 @@
 
   <script type="text/javascript">
     var map;
-
     DG.then(function () {
+      if (document.getElementById('map')) {
         map = DG.map('map', {
-            center: [51.090590, 71.426081],
-            zoom: 13
+          center: [51.090590, 71.426081],
+          zoom: 13
         });
 
         DG.marker([51.090590, 71.426081]).addTo(map).bindPopup('Вы кликнули по мне!');
-    });
+      }
+      });
 
-    new WOW().init();
-</script>
+      new WOW().init();
+
+  </script>
 
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>
