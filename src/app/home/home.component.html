@@ -37,14 +37,16 @@
 </mdb-navbar>
 
 <div id="nav" class="navbar shadow-none navbar-dark">
-  <div style="display: flex;">
+  <div class="navbar-link">
     <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная <span
         class="sr-only">(current)</span></a>
     <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
-  </div>
-  <div style="display: flex;">
-    <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Галерея</a>
-    <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать</a>
+    <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Бронь</a>
+    <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>События</a>
+  <!-- </div>
+  <div style="display: flex;"> -->
+    <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Фотогалерея</a>
+    <!-- <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать</a> -->
   </div>
 
   <div class="languages">
@@ -156,12 +158,12 @@
   <video class="video-fluid z-depth-1" autoplay loop controls muted>
       <source src="/assets/videos/лев.mp4" type="video/mp4" />
   </video>
-  <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+  <div class="mask rgba-black-strong waves-light video-mask" mdbWavesEffect></div>
 </div>
 
 <div class="title animated zoomIn">
   <div class="restaurant">
-    <h3>RESTAURANT</h3>
+    <h3>RESTAURANT & KARAOKE</h3>
   </div>
   <div class="restaurant">
     <h1>Millionaire</h1>
@@ -171,63 +173,24 @@
 </div>
 
 <div class="block">
-  <div class="about">
-    <h2>О нас</h2>
-    <div class="stick"></div>
-    <ng-container *ngIf="language=='ru'">
-      <p> Millionaire – это больше, чем ресторанный комплекс. Это стиль жизни!
-        Приготовьтесь погрузиться в непревзойденный мир ресторана и караоке с невероятным звуковым оснащением ,
-        красочной
-        шоу-программой и обслуживанием мирового уровня.
-        Мillionaire несомненно, является идеальным местом для бизнес-встреч, семейных мероприятий, корпоративных
-        ивентов,
-        закрытых вечеринок и караоке-вечеров.
-        Роскошный ресторанный комплекс также предлагает множество первоклассных удобств, от отмеченных наградами
-        миксологов до эксклюзивного высококачественного шеф-повара и гастро-шедевров бренд шеф-повара, предлагая
-        непревзойденный и уникальный опыт, как никто другой.
-      </p>
-    </ng-container>
-    <ng-container *ngIf="language=='en'">
-      <p>
-        Millionaire is more than a restaurant complex. It is a lifestyle!
-        Get ready to dive into the unsurpassed world of restaurant and karaoke with incredible sound, colorful show
-        program and world-class service.
-        Millionaire is undoubtedly the perfect venue for business meetings, family and corporate events, private parties
-        and karaoke nights.
-        As well, luxury restaurant complex offers a host of first-class amenities, from award-winning mixologists to
-        exclusive high-end chef and brand chef’s gastro masterpieces. We offer you an unrivaled and unique experience
-        that
-        you hardly find somewhere else.
-      </p>
-
-    </ng-container>
-    <ng-container *ngIf="language=='kz'">
-      <p>
-        «Millionaire» – бұл мейрамхана кешенінен артығырақ. Бұл өмір салты!
-        Керемет дыбыстық жабдықталған караокемен, түрлі-түсті шоу-бағдарламамен және әлемдік деңгейдегідей қызмет
-        көрсететін мейрамхананың таңғажайып әлеміне енуге дайын болыңыз.
-        «Мillionaire», әрине, бизнес-кездесулер, отбасылық іс-шаралар, корпоративті іс-шаралар, жеке кештер мен караоке
-        кештерін өткізу үшін өте қолайлы орын болып табылады.
-        Сонымен қатар, сәнді мейрамханалар кешені басқаларға ұқсамайтын үздік және бірегей тәжірибесімен бірге,
-        миксологтардан бастап эксклюзивті жоғары сапалы бас аспаздың және мейрамхана жауһарларының марапаттарына ие
-        болған
-        бас аспаздың брендісі мен көптеген жоғары дәрежедегі жайлылықты ұсынады.
-      </p>
-
-    </ng-container>
-    <ng-container *ngIf="language=='ch'">
-      <p> Millionaire百万富翁不仅仅是一个的餐馆综合馆,更是一种生活方式!
-        准备好潜入无与伦比的世界餐厅和卡拉OK,拥有令人难以置信的音响设备,丰富多彩的节目和世界级的服务。
-        百万富翁无疑是举行商务会议、家庭和企业活动、私人晚会和卡拉OK之夜的完美场所。豪华餐馆综合馆还提供甲级的设施,获奖调酒师，
-        高端厨师和品牌厨师的美食杰作,也提供无与伦比的独特体验。</p>
-    </ng-container>
-
-  </div>
-  <div class="about">
-    <div class="img">
-      <img src="assets/img/about.png">
+  <mdb-carousel class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="col-md-4 pb-2" *ngFor="let card of item; let cardIndex = index">
+      <mdb-card class="my-1" (mouseover) ="showDescription(true, cardIndex)"  (mouseout) ="showDescription(false, cardIndex)">
+        <figure class="snip0015">
+          <a href="payment.php">
+            <img src="{{card.img}}" width="600px" height="400px" />
+            <figcaption>
+              <p>{{card.description}}</p>
+            </figcaption>
+          </a>
+        </figure>
+        <!-- <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+        <div *ngIf="card.isShowDesc" class="card-description">{{card.description}}</div> -->
+      </mdb-card>
     </div>
-  </div>
+  </mdb-carousel-item>
+</mdb-carousel>
 </div>
 
 <div class="block-chief" style="background-image: url(assets/img/our_team-bg.png);">
