@@ -173,24 +173,16 @@
 </div>
 
 <div class="block">
-  <mdb-carousel class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
-  <mdb-carousel-item *ngFor="let item of slides; let i = index">
-    <div class="col-md-4 pb-2" *ngFor="let card of item; let cardIndex = index">
-      <mdb-card class="my-1" (mouseover) ="showDescription(true, cardIndex)"  (mouseout) ="showDescription(false, cardIndex)">
-        <figure class="snip0015">
-          <a href="payment.php">
-            <img src="{{card.img}}" width="600px" height="400px" />
-            <figcaption>
-              <p>{{card.description}}</p>
-            </figcaption>
-          </a>
-        </figure>
-        <!-- <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
-        <div *ngIf="card.isShowDesc" class="card-description">{{card.description}}</div> -->
-      </mdb-card>
-    </div>
-  </mdb-carousel-item>
-</mdb-carousel>
+    <div class="grid" #grid (mouseover)="mouseIn()" (mouseleave)="mouseOut()">
+      <figure *ngFor="let item of dataForCarousel" class="effect-sarah">
+          <img [src]="item.image" alt=""/>
+          <figcaption>
+            <h2>{{item.title}}</h2>
+              <p>{{item.description}}</p>
+              <!-- <a (click)="setSelectedEvent(item)" href="/event-details">Подробнее</a> -->
+          </figcaption>           
+      </figure>
+  </div>
 </div>
 
 <div class="block-chief" style="background-image: url(assets/img/our_team-bg.png);">

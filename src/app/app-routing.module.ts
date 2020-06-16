@@ -5,14 +5,16 @@ import { ReservComponent } from './reserv/reserv.component';
 import { MenuComponent } from './menu/menu.component';
 import { GaleryComponent } from './galery/galery.component';
 import { VipHallComponent } from './vip-hall/vip-hall.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'event-details', component: EventDetailsComponent },
   { path: 'gallery', component: GaleryComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'reservation', component: ReservComponent },
-  { path: 'vip', component: VipHallComponent},
+  { path: 'vip', component: VipHallComponent },
 
 ];
 

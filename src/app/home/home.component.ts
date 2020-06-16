@@ -1,95 +1,109 @@
 import { MainService } from './../main.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+
   language: string;
   subscription: Subscription;
-  cards = [
-    {
-      title: 'Card Title 1',
-      description: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      isShowDesc: true
-    },
-    {
-      title: 'Card Title 2',
-      description: 'This card has supporting text below as a natural lead-in to additional content.',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      isShowDesc: false
-    },
-    {
-      title: 'Card Title 3',
-      description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. This text is much longer so that you can see a significant difference between the text in  previous tabs.',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      isShowDesc: false
-    },
-    {
-      title: 'Card Title 4',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      isShowDesc: false
-    },
-    {
-      title: 'Card Title 5',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      isShowDesc: false
-    },
-    {
-      title: 'Card Title 6',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg',
-      isShowDesc: false
-    }
+  @ViewChild('grid', { static: true }) carouselElement: ElementRef<any>;
+  interval;
+  carouselAnimation: string = "in";
+
+  dataForCarousel = [{
+    image: '/assets/img/events/event1.jpg',
+    title: '«Вкус – это здравый смысл гения»',
+    description: '23 февраля у Вас появится возможность попробовать то, что Вы никогда не пробовали и, возможно, не заказали бы в ресторанах!'
+  }, 
+  {
+    image: '/assets/img/events/event2.jpg',
+    title: 'ONE MILLION & ONE NIGHT🔥',
+    description: 'Эти выходные - 6 и 7 марта, мы предлагаем провести именно в "MILLIONAIRE"! Ведь именно у нас Вы можете получить 1.000.000 зажигательных эмоции в изящной и роскошной атмосфере. В этом нам помогут ART SQUAD MILLIONAIRE!'
+  },
+  {
+    image: '/assets/img/events/event3.jpg',
+    title: 'Гастрономический ужин',
+    description: 'Мы долго думали, каким бы сделать первое мероприятие. Думали и решили! Оно будет не такое, как у всех! 23 февраля у вас появится возможность попробовать то, что Вы никогда не пробовали и, возможно, не заказали бы в ресторанах!'
+  },
+  {
+    image: '/assets/img/events/event33.jpg',
+    title: 'Грандиозный «Amazon Night»',
+    description: 'Вас ждёт тематический, неповторимый вечер, который запомнится Вам ещё надолго! А так же мы предлагаем компаниям от 4х подруг повеселить как следует, самое главное, — БЕЗ ДЕПОЗИТА🔥'
+  },
+  {
+    image: '/assets/img/events/event4.jpg',
+    title: 'Незабываемый вечер в «MILLIONAIRE»🔥',
+    description: 'Ведь —🔺Хэдлайнеры вечера - Raim & Artur! Авторы и исполнители хитов «Самая вышка", "Дискотека 90-х". Полетаем?'
+  },
+  {
+    image: '/assets/img/events/event5.jpg',
+    title: '«Беспредельный понедельник»',
+    description: 'Только в понедельник - 9 марта, для ценителей петь — караоке БЕЗ ДЕПОЗИТА🎉Предлагаем Вам насладиться шикарной атмосферой: профессиональный звук, светотехника, бэк-вокал, которые помогут раскрыть вокальные данные каждого!'
+  },
+  {
+    image: '/assets/img/events/event6.jpg',
+    title: 'Проведите вечер с @ternovoy_oleg🔥',
+    description: 'Приглашаем Вас 14 марта погрузится в невероятную атмосферу вместе с TERNOVOY (ex.ТERRY) @ternovoy_oleg (BLACK STAR)!'
+  },
   ];
-  slides: any = [[]];
-  
+
+  mouseover: boolean = false;
+
   constructor(private service: MainService) {
     this.subscription = this.service.getSelectedLanguage().subscribe(res => {
       this.language = res;
     });
   }
-  
+
   ngOnInit() {
-    this.slides = this.chunk(this.cards, 3);
-    console.log(this.slides);
-  }
-      chunk(arr: any, chunkSize:any) {
-        let R = [];
-        for (let i = 0, len = arr.length; i < len; i += chunkSize) {
-          R.push(arr.slice(i, i + chunkSize));
-        }
-        return R;
+    let index = 0
+    this.interval = setInterval(() => {
+      if(!this.mouseover){
+        this.carouselElement.nativeElement.scrollTo({ left: (this.carouselElement.nativeElement.scrollLeft + 400), behavior: 'smooth' });
+        this.dataForCarousel.push(this.dataForCarousel[index]);  
+        // let popEl = this.dataForCarousel.shift();
+        index++;
+        // this.dataForCarousel.push(popEl);
+        // console.log(this.dataForCarousel);
+        // console.log(popEl);
       }
+    }, 2500);
+
+  }
+
 
   changeLanguage(lan: string) {
     // this.service.setSelectedLanguage(lan);
   }
 
-  showDescription(flag, index){
-    this.cards[index].isShowDesc = flag;
-    console.log(this.cards[index]);
+  mouseIn(){
+    this.mouseover = true;
   }
+
+  mouseOut(){
+    this.mouseover = false;
+  }
+
+  // setSelectedEvent(item){
+  //   // this.service.selectedevent.next(item);
+  // }
+
 
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
     this.subscription.unsubscribe();
-}
+    clearInterval(this.interval);
+  }
 
 
 }
