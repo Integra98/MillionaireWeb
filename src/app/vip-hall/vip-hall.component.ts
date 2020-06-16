@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { MainService } from '../main.service';
-
 @Component({
   selector: 'app-vip-hall',
   templateUrl: './vip-hall.component.html',
   styleUrls: ['./vip-hall.component.scss']
 })
 export class VipHallComponent implements OnInit {
+
 
   hall1 = [
     {img: '/assets/img/halls/Бэнтли.png', title: 'Bentley', places: '10'},
@@ -25,7 +25,7 @@ export class VipHallComponent implements OnInit {
 
   language: string;
   subscription: Subscription;
-
+  showModal: boolean = false;
   constructor(private service: MainService) {
     this.subscription = this.service.getSelectedLanguage().subscribe(res => {
         this.language = res;

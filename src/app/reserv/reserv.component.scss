@@ -14,53 +14,6 @@
     max-height: 140px;
 }
 
-.navbar {
-    position: absolute;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-family: 'Cormorant Unicase', serif;
-    font-style: normal;
-    font-size: 13px;
-    z-index: 1000;
-    width: 100%;
-    padding-left: 25%;
-    // padding-right: 15%;
-    top: 0;
-
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    box-shadow: none !important;
-
-    .nav-link {
-        color: #FFFFFF;
-    }
-
-    .nav-link:hover {
-        color: rgba(255, 255, 255, 0.2);
-    }
-
-    .space {
-        margin-right: 8%;
-    }
-
-    .nav-half{
-        padding-left:10%;
-    }
-
-    .languages{
-        display:flex;
-        .btn-lan{
-            width:27px;
-            padding:2px;
-            background-color: #0E121B;
-
-        }
-    }
-
-
-}
-
 .menu {
     position: absolute;
     top: 30%;
@@ -102,7 +55,7 @@
     height: auto;
     color: #FFFFFF;
     display: flex;
-    margin-top: 18%;
+    margin-top: 15%;
 
 
     .type {
@@ -134,21 +87,23 @@
 
     .about {
         padding-top: 4%;
-        
+        width: 50%;
         text-align: center;
         color: #FFFFFF;
+        padding-left:16%;
+        // padding-right:10%;
 
         .img {
-            padding-top: 2%;
-            margin-left: 8%;
+            // padding-top: 2%;
+            // margin-left: 8%;
         }
 
     }
 
-    .about:first-child{
-        margin-left:13%;
-        margin-right:8%;
-    }
+    // .about:first-child{
+    //     margin-left:13%;
+    //     margin-right:8%;
+    // }
 
     h3 {
         color: black;
@@ -209,13 +164,13 @@ figure:hover+span {
 .rect {
     position: absolute;
     padding-top: 2%;
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 .rect2 {
     position: absolute;
     padding-top: 2%;
-    margin-left: 68%;
+    margin-left: 75%;
 }
 
 

@@ -9,7 +9,6 @@ import { MenuComponent } from './menu/menu.component';
 import { GaleryComponent } from './galery/galery.component';
 import { ReservComponent } from './reserv/reserv.component';
 import { VipHallComponent } from './vip-hall/vip-hall.component';
-import { EventDetailsComponent } from './event-details/event-details.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { EventDetailsComponent } from './event-details/event-details.component';
     MenuComponent,
     GaleryComponent,
     ReservComponent,
-    VipHallComponent,
-    EventDetailsComponent
+    VipHallComponent
   ],
   imports: [
     BrowserModule,

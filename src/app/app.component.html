@@ -1,1 +1,61 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg shadow-none navbar-dark fixed-top">
+    <mdb-navbar-brand>
+      <a class="navbar-brand disabled" style="opacity: 0;">Navbar</a>
+    </mdb-navbar-brand>
+    <links>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
+        <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Бронь</a>
+        <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>События</a>
+        <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>О нас</a>
+        <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Фотогалерея</a>
+        <!-- <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать</a> -->
+  
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" (click)="changeLanguage('ru')">
+              ru
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" (click)="changeLanguage('en')">
+              en
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" (click)="changeLanguage('kz')">
+              kz
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" (click)="changeLanguage('ch')">
+              ch
+            </a>
+          </li>
+        </ul>
+      </div>
+    </links>
+  </mdb-navbar>
+  
+  <div id="nav" class="navbar shadow-none navbar-dark">
+    <div class="navbar-link">
+      <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
+        <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Бронь</a>
+        <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>События</a>
+        <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>О нас</a>
+        <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Фотогалерея</a>
+      <!-- <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать</a> -->
+    </div>
+  
+    <div class="languages">
+      <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('ru')">ru</button>
+      <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('en')">en</button>
+      <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('kz')">kz</button>
+      <button type="button" class="btn btn-dark btn-lan" (click)="changeLanguage('ch')">ch</button>
+    </div>
+  
+  
+  </div>
 <router-outlet></router-outlet>
