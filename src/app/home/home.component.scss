@@ -110,6 +110,27 @@
   margin-bottom: 10px; 
   padding:0;
 
+  .arrow{
+    margin-top: 150px;
+    position: absolute;
+    z-index: 100000;
+    background-color: #0E121B;
+    cursor: pointer;
+
+
+    img{
+      width: 57px;
+      height: 80px;
+    }
+
+    .img-right {
+      transform: rotate(180deg);
+     }
+
+    }
+       .right{
+         margin-left: 97%;
+       }
 }
 
 .block-chief {

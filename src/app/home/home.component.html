@@ -173,7 +173,10 @@
 </div>
 
 <div class="block">
-    <div class="grid" #grid (mouseover)="mouseIn()" (mouseleave)="mouseOut()">
+  <div class="grid" #grid (mouseover)="mouseIn()" (mouseleave)="mouseOut()">
+    <div class="arrow" [@show] *ngIf="this.mouseover" (click)="scrollCarousel('left')">
+      <img class="img-right" src="/assets/icons/next.svg" alt="">
+    </div>
       <figure *ngFor="let item of dataForCarousel" class="effect-sarah">
           <img [src]="item.image" alt=""/>
           <figcaption>
@@ -182,6 +185,9 @@
               <!-- <a (click)="setSelectedEvent(item)" href="/event-details">Подробнее</a> -->
           </figcaption>           
       </figure>
+      <div class="arrow right" [@show] *ngIf="this.mouseover" (click)="scrollCarousel('right')">
+        <img src="/assets/icons/next.svg" alt="">
+      </div>
   </div>
 </div>
 

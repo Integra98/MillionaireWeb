@@ -10,6 +10,17 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('show', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate('300ms ease-in-out')
+      ]),
+      transition('* => void', [
+        style({ opacity: 1 }),
+        animate('300ms ease-in-out')
+      ])
+    ])]
 })
 export class HomeComponent implements OnInit {
 
@@ -78,6 +89,14 @@ export class HomeComponent implements OnInit {
       }
     }, 2500);
 
+  }
+
+  scrollCarousel(flag: string){
+    if(flag === 'left'){
+      this.carouselElement.nativeElement.scrollTo({ left: (this.carouselElement.nativeElement.scrollLeft - 400), behavior: 'smooth' });
+    } else {
+      this.carouselElement.nativeElement.scrollTo({ left: (this.carouselElement.nativeElement.scrollLeft + 400), behavior: 'smooth' });
+    }
   }
 
 
