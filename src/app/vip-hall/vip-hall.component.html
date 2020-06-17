@@ -49,7 +49,7 @@
 <div class="block-vip first" >
   <figure class="snip0015" *ngFor="let hall of hall1">
     <!-- <a href="payment.php"> -->
-      <a>
+      <a (click)="showModal = true">
       <img src="{{hall.img}}" width="250px" height="150px" />
       <figcaption>
         <h2>Зал <br> <span>{{hall.title}}</span></h2>
