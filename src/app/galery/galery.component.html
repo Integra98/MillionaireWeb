@@ -8,15 +8,15 @@
   <div class="stick"></div>
 </div>
 <div class="types">
-  <div class="type" (click)=changeType(public)>общий зал</div>
-  <div class="type" (click)=changeType(bantli)>Bentley</div>
-  <div class="type" (click)=changeType(versaci)>Versace</div>
-  <div class="type" (click)=changeType(gucci)>Gucci</div>
-  <div class="type" (click)=changeType(madona)>Madonna</div>
-  <div class="type" (click)=changeType(roberto)>Roberto</div>
-  <div class="type" (click)=changeType(fandi)>Fendi</div>
-  <div class="type" (click)=changeType(hermes)>Hermes</div>
-  <div class="type" (click)=changeType(kavia)>Caviar</div>
+  <div class="type" (click)=changeType(public) [ngStyle]="{'text-decoration' : hall === public ? 'underline' : 'none'}">Общий зал</div>
+  <div class="type" (click)=changeType(bantli) [ngStyle]="{'text-decoration' : hall === bantli ? 'underline' : 'none'}">Bentley</div>
+  <div class="type" (click)=changeType(versaci) [ngStyle]="{'text-decoration' : hall === versaci ? 'underline' : 'none'}">Versace</div>
+  <div class="type" (click)=changeType(gucci) [ngStyle]="{'text-decoration' : hall === gucci ? 'underline' : 'none'}">Gucci</div>
+  <div class="type" (click)=changeType(madona) [ngStyle]="{'text-decoration' : hall === madona ? 'underline' : 'none'}">Madonna</div>
+  <div class="type" (click)=changeType(roberto) [ngStyle]="{'text-decoration' : hall === roberto ? 'underline' : 'none'}">Roberto</div>
+  <div class="type" (click)=changeType(fandi) [ngStyle]="{'text-decoration' : hall === fandi ? 'underline' : 'none'}">Fendi</div>
+  <div class="type" (click)=changeType(hermes) [ngStyle]="{'text-decoration' : hall === hermes ? 'underline' : 'none'}">Hermes</div>
+  <div class="type" (click)=changeType(kavia) [ngStyle]="{'text-decoration' : hall === kavia ? 'underline' : 'none'}">Caviar</div>
 </div>
 
 <div class="slider">
