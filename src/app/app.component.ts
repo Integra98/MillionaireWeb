@@ -1,6 +1,6 @@
 import { MainService } from './main.service';
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router } from '@angular/router';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
 
 
@@ -12,7 +12,8 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
 export class AppComponent {
   title = 'millionaireWeb';
 
-  constructor(private service: MainService){}
+  constructor(private service: MainService, private router: Router){
+  }
   
 
   changeLanguage(lan: string) {
@@ -20,7 +21,11 @@ export class AppComponent {
   }
 
   scrollIntoViewEvent(flag: string){
-    this.service.scrolEvent.emit(flag)
+    if(window.location.pathname !== '/home'){
+      localStorage.setItem('routerFlag', flag);
+      this.router.navigate(['/home']);
+    }
+    this.service.scrolEvent.next(flag);
 
   }
 

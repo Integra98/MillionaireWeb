@@ -85,6 +85,14 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    let localStorageItem = localStorage.getItem('routerFlag');
+    if(localStorageItem === 'events'){
+      this.eventsComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
+    } else {
+      this.aboutComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
+
+    }
     let index = 0
     this.interval = setInterval(() => {
       if(!this.mouseover){
@@ -103,8 +111,6 @@ export class HomeComponent implements OnInit {
           this.eventsComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
         } else {
           this.aboutComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
-    
-        
       }
     });
     this.subscription.push(sub);

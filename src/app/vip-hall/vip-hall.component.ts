@@ -36,6 +36,7 @@ export class VipHallComponent implements OnInit {
   subscription: Subscription;
   showModal: boolean = false;
   showFormModal: boolean = false;
+  selectedImg: string;
   
   constructor(private service: MainService) {
     this.subscription = this.service.getSelectedLanguage().subscribe(res => {

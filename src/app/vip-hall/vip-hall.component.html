@@ -13,6 +13,7 @@
     <span class="close" (click)="showModal = false">×</span>
   </div>
   <div class="modal-window-body">
+    <img class="vipImg" src="{{selectedImg}}" alt="">
     "MILLIONAIRE" своим притязательным гостям представляет элитные и уникальные VIP-залы. Уникальность в том, что в каждой из них исключительный брендовый стиль и
     шикарная атмосфера, которую может ощутить не каждый! 
     Великолепие в каждой детали зала: сервировка, коллекции элегантной брендовой мебели и интерьера, так же с деталями ручной работы из дорогих материалов.
@@ -45,7 +46,7 @@
 </div>
 
 
-<div class="block" style="margin-top: 18%;">
+<div class="block-vip first" >
   <figure class="snip0015" *ngFor="let hall of hall1">
     <!-- <a href="payment.php"> -->
       <a>
@@ -59,7 +60,7 @@
 
   <div class="adaptive-btn adaptive-btn-top">
     <div class="vip-btns">
-      <a class="icon" href="payment.php" *ngFor="let hall of hall1">
+      <a class="icon" (click)="showModal = true; selectedImg = hall.img" *ngFor="let hall of hall1">
         <h5>{{hall.title}}</h5>
         <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
       </a>
@@ -68,7 +69,7 @@
 
 </div>
 
-<div class="block">
+<div class="block-vip">
   <figure class="snip0015" *ngFor="let hall of hall2" >
     <a (click)="showModal = true">
       <img src="{{hall.img}}" width="250px" height="150px" />
@@ -81,7 +82,7 @@
 
   <div class="adaptive-btn">
     <div class="vip-btns">
-      <a class="icon" *ngFor="let hall of hall2">
+      <a class="icon" (click)="showModal = true; selectedImg = hall.img" *ngFor="let hall of hall2">
         <h5>{{hall.title}}</h5>
         <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
       </a>

@@ -12,12 +12,14 @@ import { Router } from '@angular/router';
 export class ReservComponent implements OnInit {
 
   language: string;
-  subscription: Subscription;
+  subscription: Subscription[] =[];
+  showFormModal: boolean = false;
 
   constructor(private service: MainService, private router: Router) {
-    this.subscription = this.service.getSelectedLanguage().subscribe(res => {
+    let subscription = this.service.getSelectedLanguage().subscribe(res => {
         this.language = res;
     });
+    this.subscription.push(subscription)
   }
 
   ngOnInit() {
@@ -31,7 +33,9 @@ export class ReservComponent implements OnInit {
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
-    this.subscription.unsubscribe();
+    this.subscription.map(sub => {
+      sub.unsubscribe();
+    });
 }
 
 }

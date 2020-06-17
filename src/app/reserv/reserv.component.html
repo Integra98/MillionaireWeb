@@ -8,13 +8,34 @@
   <div class="stick"></div>
 </div>
 
+<div class="modal-window modal-window-form" [@dialog] *ngIf="showFormModal">
+  <div class="modal-window-header">
+    <span class="close" (click)="showFormModal = false">×</span>
+  </div>
+  <div class="modal-window-body modal-window-body-form">
+    <form action="telegram.php" method="POST">
+      <div class="inputs">
+        <input type="text" placeholder="Имя">
+        <input type="number" placeholder="Номер телефона">
+      </div>
+      <div class="inputs">
+        <input type="date" placeholder="Выберите дату">
+        <input type="time" placeholder="Выберите время">
+      </div>
+      <div class="modal-window-footer">
+        <input class="btn btn-primary" type="submit" value="Отправить">
+      </div>
+    </form>
+  </div>
+</div>
+
 <div class="block-events">
   <div class="flex-res">
     <div class="about">
       <!-- <div class="hover img" routerLink="/common"> -->
         <div class="hover img">
         <figure>
-          <a href="payment.php">
+          <a (click)="showFormModal = true">
             <img src="assets/img/Desktop-6.png"  />
           </a>
         </figure>

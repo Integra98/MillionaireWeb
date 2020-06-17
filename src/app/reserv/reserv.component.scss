@@ -191,3 +191,82 @@ figure:hover+span {
 .flex-res{
     display: flex;
 }
+
+
+.modal-window {
+    width: 600px;
+    height: auto;
+    position: absolute;
+    // background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    z-index: 10000;
+    left: 35%;
+    top: 25%;
+    color: white;
+    font-family: 'Cormorant Unicase', serif !important;
+  
+    &-form{
+      width: 800px;
+      left: 30%;
+  
+      .inputs{
+        display: flex;
+        width: 700px;
+  
+        input{
+          font-size: 16px;
+          width: 50%;
+          margin: 5px;
+      
+        }
+      }
+    }
+  
+    .modal-window-header {
+      padding: 0rem 1rem !important;
+      height: 30px;
+      background-color: #0E121B !important;
+  
+      .close {
+        margin-left: auto;
+        margin-right: 0;
+        font-size: 30px;
+        color: white;
+        cursor: default;
+      }
+    }
+  
+    .modal-window-body {
+      padding: 10px;
+      background-color: #0E121B !important;
+      height: auto;
+      text-align: center;
+  
+      &-form{
+      padding: 40px;
+      }
+  
+    }
+  
+    .modal-window-footer{
+      padding: 10px 10px 20px 10px;
+      display: flex;
+      justify-content: center;
+      background-color: #0E121B !important;
+  
+    }
+  
+    .btn-primary {
+      background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%) !important;
+      border-radius: 5px;
+      width: 250px !important;
+      height: 44px !important;
+      font-size: 20px !important;
+      text-align: center;
+      border-color: none !important;
+    }
+  
+    .btn-primary:hover{
+      border-color: none !important;
+    }
+  }

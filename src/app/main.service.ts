@@ -9,7 +9,7 @@ export class MainService {
   languages: ['en', 'ru', 'kz', 'ch'];
   // selectedLanguage = new EventEmitter<string>();
   private selectedLanguage = new BehaviorSubject('ru');
-  scrolEvent: EventEmitter<string> = new EventEmitter<string>()
+  scrolEvent: Subject<string> = new Subject<string>();
   constructor() {
    }
 

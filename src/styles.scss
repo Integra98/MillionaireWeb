@@ -185,6 +185,7 @@ h3 {
 
             img {
                 margin-left: 6%;
+                margin-top: 4%;
                 width: 350px !important;
                 height: 270px !important;
             }
@@ -224,6 +225,7 @@ h3 {
         .about {
             width: 100% !important;
             padding: 0;
+            padding-left: 12% !important;
 
             img {
                 width: 350px !important;
@@ -240,10 +242,6 @@ h3 {
     .down-bar {
         height: 50px !important;
         font-size: 10px !important;
-        .text{
-            padding-left: 0px !important;
-            text-align: left !important;
-        }
 
         .social{
             padding: 0px !important;
@@ -272,6 +270,7 @@ h3 {
 
     .types {
         margin-top: 35% !important;
+        padding-left: 9% !important;
 
         .type {
             font-size: 4.5px !important;
@@ -316,6 +315,14 @@ h3 {
         }
     }
 
+    .block-vip {
+        padding-left: 12% !important; 
+        
+    }
+            .first{
+              margin-top: 0px !important;
+            }
+
     .snip0015 {
         display: none;
     }
@@ -328,36 +335,73 @@ h3 {
         margin-top: 50% !important;
     }
 
-    .forma {
-        margin-top: 45% !important;
+    .modal-window {
+        width: 413px !important;
+        left: 0px !important;
+        font-size: 0.8rem !important;
 
-        input {
-            width: 240px !important;
-            margin-bottom: 2px !important;
+        &-form{
+            left: 0px !important;
+
+            .inputs{
+                input{
+                    // font-size: 12px !important;
+                    width: 25% !important;
+                }
+            }
+
         }
 
-        .submit {
-            margin-left: 6% !important;
-            margin-bottom: 5% !important;
-            margin-top: -6% !important;
-
+        .vipImg{
+            margin-bottom: 5px;
+            display: block !important;
+            width: 370px;
         }
 
-        .icon {
-            padding-left: 29% !important;
+        .modal-window-body {
+            padding: 20px !important;
+
+            &-form{
+                padding: 20px !important;
+            }
         }
 
-        .center {
-            margin-left: 0 !important;
-        }
-
-        .left {
-            margin-left: 0 !important;
-        }
-        .left-date {
-            margin-left: 0 !important;
+        .btn-primary{
+            width: 200px !important;
+            height: 36px !important;
         }
     }
+
+    // .forma {
+    //     margin-top: 45% !important;
+
+    //     input {
+    //         width: 240px !important;
+    //         margin-bottom: 2px !important;
+    //     }
+
+    //     .submit {
+    //         margin-left: 6% !important;
+    //         margin-bottom: 5% !important;
+    //         margin-top: -6% !important;
+
+    //     }
+
+    //     .icon {
+    //         padding-left: 29% !important;
+    //     }
+
+    //     .center {
+    //         margin-left: 0 !important;
+    //     }
+
+    //     .left {
+    //         margin-left: 0 !important;
+    //     }
+    //     .left-date {
+    //         margin-left: 0 !important;
+    //     }
+    // }
 
 
 }
