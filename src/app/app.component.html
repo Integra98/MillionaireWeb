@@ -40,7 +40,7 @@
   
   <div id="nav" class="navbar shadow-none navbar-dark">
     <div class="navbar-link">
-      <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active waves-light" href="/home" (click)="cleanLocalStorage()" mdbWavesEffect>Главная</a>
         <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
         <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Бронь</a>
         <a class="nav-item nav-link waves-light" (click)="scrollIntoViewEvent('events')" mdbWavesEffect>События</a>

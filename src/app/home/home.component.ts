@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit {
     let localStorageItem = localStorage.getItem('routerFlag');
     if(localStorageItem === 'events'){
       this.eventsComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
-    } else {
+    } else if(localStorageItem === 'about') {
       this.aboutComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
 
     }

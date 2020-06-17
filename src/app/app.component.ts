@@ -20,6 +20,10 @@ export class AppComponent {
     // this.service.setSelectedLanguage(lan);
   }
 
+  cleanLocalStorage(){
+    localStorage.setItem('routerFlag', null);
+  }
+
   scrollIntoViewEvent(flag: string){
     if(window.location.pathname !== '/home'){
       localStorage.setItem('routerFlag', flag);
