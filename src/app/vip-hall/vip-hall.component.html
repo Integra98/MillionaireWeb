@@ -18,7 +18,29 @@
     Великолепие в каждой детали зала: сервировка, коллекции элегантной брендовой мебели и интерьера, так же с деталями ручной работы из дорогих материалов.
   </div>
   <div class="modal-window-footer">
-    <div class="btn btn-primary">БРОНЬ</div>
+    <div class="btn btn-primary" (click)="showFormModal = true; showModal = false;">БРОНЬ</div>
+  </div>
+</div>
+
+
+<div class="modal-window modal-window-form" [@dialog] *ngIf="showFormModal">
+  <div class="modal-window-header">
+    <span class="close" (click)="showFormModal = false">×</span>
+  </div>
+  <div class="modal-window-body modal-window-body-form">
+    <form action="telegram.php" method="POST">
+      <div class="inputs">
+        <input type="text" placeholder="Имя">
+        <input type="number" placeholder="Номер телефона">
+      </div>
+      <div class="inputs">
+        <input type="date" placeholder="Выберите дату">
+        <input type="time" placeholder="Выберите время">
+      </div>
+      <div class="modal-window-footer">
+        <input class="btn btn-primary" type="submit" value="Отправить">
+      </div>
+    </form>
   </div>
 </div>
 

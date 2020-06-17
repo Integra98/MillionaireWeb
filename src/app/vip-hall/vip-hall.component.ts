@@ -35,6 +35,7 @@ export class VipHallComponent implements OnInit {
   language: string;
   subscription: Subscription;
   showModal: boolean = false;
+  showFormModal: boolean = false;
   
   constructor(private service: MainService) {
     this.subscription = this.service.getSelectedLanguage().subscribe(res => {
