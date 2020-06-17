@@ -25,7 +25,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class HomeComponent implements OnInit {
 
   language: string;
-  subscription: Subscription;
+  subscription: Subscription[] = [];
   @ViewChild('grid', { static: true }) carouselElement: ElementRef<any>;
   interval;
   carouselAnimation: string = "in";
@@ -74,10 +74,14 @@ export class HomeComponent implements OnInit {
 
   mouseover: boolean = false;
 
+  @ViewChild('grid', {static: true}) eventsComponent: ElementRef;
+  @ViewChild('about', {static: true}) aboutComponent: ElementRef;
+
   constructor(private service: MainService) {
-    this.subscription = this.service.getSelectedLanguage().subscribe(res => {
+    let sub = this.service.getSelectedLanguage().subscribe(res => {
       this.language = res;
     });
+    this.subscription.push(sub);
   }
 
   ngOnInit() {
@@ -93,6 +97,17 @@ export class HomeComponent implements OnInit {
         // console.log(popEl);
       }
     }, 2500);
+
+    let sub = this.service.scrolEvent.subscribe(res => {
+        if(res === 'events'){
+          this.eventsComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
+        } else {
+          this.aboutComponent.nativeElement.scrollIntoView({ block: "start", behavior: "smooth" });
+    
+        
+      }
+    });
+    this.subscription.push(sub);
 
   }
 
@@ -125,7 +140,9 @@ export class HomeComponent implements OnInit {
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
-    this.subscription.unsubscribe();
+    this.subscription.map(sub => {
+      sub.unsubscribe();
+    })
     clearInterval(this.interval);
   }
 

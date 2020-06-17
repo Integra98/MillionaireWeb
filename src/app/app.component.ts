@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { MainService } from './main.service';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
 
@@ -11,8 +12,16 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
 export class AppComponent {
   title = 'millionaireWeb';
 
+  constructor(private service: MainService){}
+  
+
   changeLanguage(lan: string) {
     // this.service.setSelectedLanguage(lan);
+  }
+
+  scrollIntoViewEvent(flag: string){
+    this.service.scrolEvent.emit(flag)
+
   }
 
 
