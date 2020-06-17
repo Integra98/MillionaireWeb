@@ -1,10 +1,19 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { MainService } from '../main.service';
+import { trigger, transition, style, animate } from '@angular/animations';
 @Component({
   selector: 'app-vip-hall',
   templateUrl: './vip-hall.component.html',
-  styleUrls: ['./vip-hall.component.scss']
+  styleUrls: ['./vip-hall.component.scss'],
+  animations: [
+    trigger('dialog', [
+      transition('void => *', [
+        style({ transform: 'scale3d(.3, .3, .3)' }),
+        animate(200)
+      ])
+    ])
+  ]
 })
 export class VipHallComponent implements OnInit {
 
@@ -26,6 +35,7 @@ export class VipHallComponent implements OnInit {
   language: string;
   subscription: Subscription;
   showModal: boolean = false;
+  
   constructor(private service: MainService) {
     this.subscription = this.service.getSelectedLanguage().subscribe(res => {
         this.language = res;

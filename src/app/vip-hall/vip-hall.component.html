@@ -8,6 +8,21 @@
   <div class="stick"></div>
 </div>
 
+<div class="modal-window" [@dialog] *ngIf="showModal">
+  <div class="modal-window-header">
+    <span class="close" (click)="showModal = false">×</span>
+  </div>
+  <div class="modal-window-body">
+    "MILLIONAIRE" своим притязательным гостям представляет элитные и уникальные VIP-залы. Уникальность в том, что в каждой из них исключительный брендовый стиль и
+    шикарная атмосфера, которую может ощутить не каждый! 
+    Великолепие в каждой детали зала: сервировка, коллекции элегантной брендовой мебели и интерьера, так же с деталями ручной работы из дорогих материалов.
+  </div>
+  <div class="modal-window-footer">
+    <div class="btn btn-primary">БРОНЬ</div>
+  </div>
+</div>
+
+
 <div class="block" style="margin-top: 18%;">
   <figure class="snip0015" *ngFor="let hall of hall1">
     <!-- <a href="payment.php"> -->
@@ -33,7 +48,7 @@
 
 <div class="block">
   <figure class="snip0015" *ngFor="let hall of hall2" >
-    <a >
+    <a (click)="showModal = true">
       <img src="{{hall.img}}" width="250px" height="150px" />
       <figcaption>
         <h2>Зал <br> <span>{{hall.title}}</span></h2>
@@ -51,4 +66,6 @@
     </div>
   </div>
 </div>
+
+
 
