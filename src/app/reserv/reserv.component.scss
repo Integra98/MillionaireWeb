@@ -78,10 +78,10 @@
 }
 
 .block-events {
-    // height: 100%;
     width: 100%;
-    padding-right: 4%;
     padding-top: 15%;
+    // height: 100%;
+    // padding-right: 4%;
     // padding-bottom: 4%;
 
 
@@ -90,7 +90,9 @@
         width: 50%;
         text-align: center;
         color: #FFFFFF;
-        padding-left:16%;
+        display: flex;
+        justify-content: center;
+        // padding-left:16%;
         // padding-right:10%;
 
         .img {
