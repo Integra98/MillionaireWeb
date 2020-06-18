@@ -7,12 +7,32 @@ import { GaleryComponent } from './galery/galery.component';
 import { VipHallComponent } from './vip-hall/vip-hall.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, data: { animation: 'isLeft'} },
-  { path: 'gallery', component: GaleryComponent, data: { animation: 'isRight'}  },
-  { path: 'menu', component: MenuComponent, data: { animation: 'isLeft'}  },
-  { path: 'reservation', component: ReservComponent, data: { animation: 'isLeft'}  },
-  { path: 'vip', component: VipHallComponent, data: { animation: 'isRight'}  },
+  { path: '', 
+  redirectTo: 'home', 
+  pathMatch: 'full',
+ },
+  { path: 'home', 
+  component: HomeComponent, 
+  data: { animation: 'one'}
+},
+  { path: 'gallery', 
+  component: GaleryComponent,
+  data: { animation: 'two'}
+},
+  { path: 'menu', 
+  component: MenuComponent , 
+  data: { animation: 'three'} 
+},
+  { path: 'reservation', 
+  component: ReservComponent  ,
+  data: { animation: 'four'} 
+
+},
+  { path: 'vip', 
+  component: VipHallComponent,
+  data: { animation: 'five'} 
+
+},
 
 ];
 

@@ -2,15 +2,17 @@ import { MainService } from './main.service';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
-import { slider } from './router-animations';
 import { NavbarComponent } from 'angular-bootstrap-md/lib/free/navbars/navbar.component';
+import { slideInAnimation } from './animations';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [ slider ]
+  animations: [
+    slideInAnimation
+   ],
 })
 export class AppComponent {
   title = 'millionaireWeb';
@@ -20,7 +22,7 @@ export class AppComponent {
   }
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
   
 
