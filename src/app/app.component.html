@@ -1,15 +1,15 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg shadow-none navbar-dark fixed-top">
+<mdb-navbar #navbarid SideClass="navbar navbar-expand-lg shadow-none navbar-dark fixed-top">
     <mdb-navbar-brand>
       <a class="navbar-brand disabled" style="opacity: 0;">Navbar</a>
     </mdb-navbar-brand>
     <links>
       <div class="navbar-nav">
-        <a class="nav-item nav-link active waves-light" href="/home" mdbWavesEffect>Главная <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link waves-light" href="/menu" mdbWavesEffect>Меню</a>
-        <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Бронь</a>
-        <a class="nav-item nav-link waves-light" (click)="scrollIntoViewEvent('events')" mdbWavesEffect>События</a>
-        <a class="nav-item nav-link waves-light" (click)="scrollIntoViewEvent('about')" mdbWavesEffect>О нас</a>
-        <a class="nav-item nav-link waves-light" href="/gallery" mdbWavesEffect>Фотогалерея</a>
+        <a class="nav-item nav-link active waves-light" href="/home" (click)="onClick()" mdbWavesEffect>Главная <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link waves-light" href="/menu" (click)="onClick()" mdbWavesEffect>Меню</a>
+        <a class="nav-item nav-link waves-light" href="/reservation" (click)="onClick()" mdbWavesEffect>Бронь</a>
+        <a class="nav-item nav-link waves-light" (click)="scrollIntoViewEvent('events'); onClick()" mdbWavesEffect>События</a>
+        <a class="nav-item nav-link waves-light" (click)="scrollIntoViewEvent('about'); onClick()" mdbWavesEffect>О нас</a>
+        <a class="nav-item nav-link waves-light" href="/gallery" (click)="onClick()" mdbWavesEffect>Фотогалерея</a>
         <!-- <a class="nav-item nav-link waves-light" href="/reservation" mdbWavesEffect>Забронировать</a> -->
   
         <!-- <ul class="navbar-nav ml-auto nav-flex-icons">

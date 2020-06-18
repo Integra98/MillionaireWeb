@@ -3,6 +3,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
 import { slider } from './router-animations';
+import { NavbarComponent } from 'angular-bootstrap-md/lib/free/navbars/navbar.component';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { slider } from './router-animations';
 })
 export class AppComponent {
   title = 'millionaireWeb';
+  @ViewChild('navbarid', {static: true}) navbaridRef: NavbarComponent;
 
   constructor(private service: MainService, private router: Router){
   }
@@ -37,6 +39,12 @@ export class AppComponent {
     }
     this.service.scrolEvent.next(flag);
 
+  }
+
+  onClick(): void {
+    if (this.navbaridRef.shown) {
+    this.navbaridRef.toggle();
+    }
   }
 
 
