@@ -3,11 +3,20 @@ import { Subscription } from 'rxjs';
 import { MainService } from '../main.service';
 import { ThrowStmt } from '@angular/compiler';
 import { Router } from '@angular/router';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-reserv',
   templateUrl: './reserv.component.html',
-  styleUrls: ['./reserv.component.scss']
+  styleUrls: ['./reserv.component.scss'],
+  animations: [
+    trigger('dialog', [
+      transition('void => *', [
+        style({ transform: 'scale3d(.3, .3, .3)' }),
+        animate(200)
+      ])
+    ])
+  ]
 })
 export class ReservComponent implements OnInit {
 

@@ -19,10 +19,20 @@
   <div class="type" (click)=changeType(kavia) [ngStyle]="{'text-decoration' : hall === kavia ? 'underline' : 'none'}">Caviar</div>
 </div>
 
-<div class="slider">
+<div class="slider animated zoomIn" >
+  <ng-container *ngIf="loader">
+    <div class="loader">
+      <div class="spinner-border text-light " role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </ng-container>
+<ng-container *ngIf="!loader">
   <mdb-carousel class="carousel slide carousel-fade" [type]="'carousel-thumbnails'" [animation]="'fade'">
     <mdb-carousel-item *ngFor="let img of hall">
       <img class="d-block w-100" src="{{img}}" alt="First slide">
     </mdb-carousel-item>
   </mdb-carousel>
+</ng-container>
+  
 </div>

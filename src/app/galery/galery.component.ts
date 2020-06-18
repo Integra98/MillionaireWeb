@@ -11,6 +11,7 @@ export class GaleryComponent implements OnInit {
   hall: any;
   language: string;
   subscription: Subscription;
+  loader: boolean = false;
 
   public = ['/assets/img/halls/Общий1.png', '/assets/img/halls/Общий2.png', '/assets/img/halls/Общий3.png'];
   bantli = ['/assets/img/halls/Бэнтли.png', '/assets/img/halls/Бэнтли2.png', '/assets/img/halls/Бэнтли3.png'];
@@ -33,7 +34,11 @@ export class GaleryComponent implements OnInit {
   }
 
   changeType(hall) {
+    this.loader = true;
     this.hall = hall;
+    setTimeout(() => {
+      this.loader = false;
+    }, 200);
   }
 
   changeLanguage(lan: string) {

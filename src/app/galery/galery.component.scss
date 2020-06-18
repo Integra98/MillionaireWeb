@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 1040;
     display: block;
-    top: 16%;
+    margin-top: 4%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #0E121B;
@@ -16,7 +16,7 @@
 
 .menu {
     position: absolute;
-    top: 30%;
+    margin-top: 8%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -49,17 +49,17 @@
 }
 
 .types {
-    // position: absolute;
+    position: absolute;
     // padding-left: 15%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 22px;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
-    margin-top: 15%;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin-top: 12%;
     left: 0;
     right: 0;
 
@@ -68,10 +68,10 @@
         padding-left: 1%;
         padding-right: 1%;
         font-size: 15px;
-        display: flex;
+        // display: flex;
         align-items: center;
         text-align: center;
-        letter-spacing: 0.5em;
+        letter-spacing: 0.4em;
         text-transform: uppercase;
         border-right: 1px solid white;
         font-family: 'Cormorant Unicase', serif;
@@ -107,19 +107,34 @@
 }
 
 .slider {
-    padding-top: 2%;
+    // padding-top: 2%;
+    position: absolute;
     width: 70%;
     height: 60%;
     text-align: center;
     margin-left: auto;
     margin-bottom: 3%;
     margin-right: auto;
+    margin-top: 15%;
     left: 0;
     right: 0;
 }
 
+.loader{
+    width: 100%;
+    height: 60%;
+    margin-top: 17%;
+
+}
+
 .flex{
     display: flex;
+}
+
+
+.spinner-border {
+    width: 8rem !important;
+    height: 8rem !important;
 }
 
 

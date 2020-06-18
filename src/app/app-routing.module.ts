@@ -8,11 +8,11 @@ import { VipHallComponent } from './vip-hall/vip-hall.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'gallery', component: GaleryComponent },
-  { path: 'menu', component: MenuComponent },
-  { path: 'reservation', component: ReservComponent },
-  { path: 'vip', component: VipHallComponent },
+  { path: 'home', component: HomeComponent, data: { animation: 'isLeft'} },
+  { path: 'gallery', component: GaleryComponent, data: { animation: 'isRight'}  },
+  { path: 'menu', component: MenuComponent, data: { animation: 'isLeft'}  },
+  { path: 'reservation', component: ReservComponent, data: { animation: 'isLeft'}  },
+  { path: 'vip', component: VipHallComponent, data: { animation: 'isRight'}  },
 
 ];
 
