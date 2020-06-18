@@ -105,7 +105,7 @@ h3 {
     }
 
     .title {
-        top: 10% !important;
+        top: 4% !important;
 
         h1 {
             font-size: 30px;
@@ -117,7 +117,7 @@ h3 {
     }
 
     .rectangle {
-        height: 2% !important;
+        height: 1% !important;
     }
 
     .block {
@@ -193,6 +193,7 @@ h3 {
     }
 
     .block-chief {
+        font-size: 0.8rem !important;
 
         .flex {
             display: block !important;
@@ -261,7 +262,21 @@ h3 {
     }
 
     .menu {
-        top: 10% !important;
+        margin-top: -12% !important;
+    }
+
+    .gallery-title{
+        margin-top: 18% !important;
+
+    }
+
+    .reserv-title{
+        margin-top: -32% !important;
+
+    }
+
+    .reserv-vip{
+        margin-top: 67% !important;
     }
 
     .mar-top {
@@ -270,13 +285,18 @@ h3 {
 
     .types {
         margin-top: 35% !important;
+        height: 6px !important;
         // padding-left: 9% !important;
 
         .type {
-            font-size: 4.5px !important;
+            font-size: 5.5px !important;
             padding-left: 2px !important;
             padding-right: 2px !important;
         }
+    }
+
+    .slider{
+        margin-top: 40% !important;
     }
 
     .flex-res {
@@ -339,6 +359,7 @@ h3 {
         width: 413px !important;
         left: 0px !important;
         font-size: 0.8rem !important;
+        top: 24% !important;
 
         &-form{
             left: 0px !important;
