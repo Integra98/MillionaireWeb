@@ -138,6 +138,9 @@ export class HomeComponent implements OnInit {
     this.mouseover = false;
   }
 
+  routeInstagramPage(){
+    window.open('https://www.instagram.com/millionaire.astana/?hl=ru');
+  }
   // setSelectedEvent(item){
   //   // this.service.selectedevent.next(item);
   // }
