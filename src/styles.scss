@@ -290,11 +290,15 @@ h3 {
     }
 
     .reserv-vip{
-        margin-top: 67% !important;
+        margin-top: 0 !important;
     }
 
     .mar-top {
         margin-top: 35% !important;
+    }
+
+    .vip-blocks[_ngcontent-nmf-c2] {
+        margin-top: 156px !important;
     }
 
     .types {
@@ -349,35 +353,27 @@ h3 {
         }
     }
 
-    .block-vip {
-        padding-left: 12% !important; 
-        
-    }
-            .first{
-              margin-top: 0px !important;
-            }
-
     .snip0015 {
         display: none;
     }
 
     .adaptive-btn {
         display: block !important;
+        .vip-btns{
+            padding-left: 0 !important;
+        }
     }
 
     .adaptive-btn-top {
-        margin-top: 50% !important;
+        margin-top: 10% !important;
     }
 
     .modal-window {
         width: 413px !important;
-        left: 0px !important;
         font-size: 0.8rem !important;
-        top: 24% !important;
-
+        margin-top: -28% !important;
+        
         &-form{
-            left: 0px !important;
-
             .inputs{
                 input{
                     // font-size: 12px !important;

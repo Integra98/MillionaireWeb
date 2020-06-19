@@ -166,7 +166,8 @@ figure:hover+span {
 .rect {
     position: absolute;
     padding-top: 2%;
-    margin-left: 5%;
+    left: auto;
+    right: 76%;
 }
 
 .rect2 {
@@ -199,17 +200,19 @@ figure:hover+span {
     width: 600px;
     height: auto;
     position: absolute;
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%); 
     // background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%);
+    // left: 35%;
+    // top: 40%;
     border: 1px solid rgba(255, 255, 255, 0.9);
     z-index: 10000;
-    left: 35%;
-    top: 40%;
     color: white;
     font-family: 'Cormorant Unicase', serif !important;
   
     &-form{
       width: 800px;
-      left: 30%;
   
       .inputs{
         display: flex;

@@ -31,12 +31,12 @@
   <div class="modal-window-body modal-window-body-form">
     <form action="telegram.php" method="POST">
       <div class="inputs">
-        <input type="text" placeholder="Имя">
-        <input type="number" placeholder="Номер телефона">
+        <input type="text" name="name" placeholder="Имя">
+        <input type="number" name="phone" placeholder="Номер телефона">
       </div>
       <div class="inputs">
-        <input type="date" placeholder="Выберите дату">
-        <input type="time" placeholder="Выберите время">
+        <input type="date" name="date" placeholder="Выберите дату">
+        <input type="time" name="time" placeholder="Выберите время">
       </div>
       <div class="modal-window-footer">
         <input class="btn btn-primary" type="submit" value="Отправить">
@@ -45,48 +45,52 @@
   </div>
 </div>
 
-
-<div class="block-vip first" >
-  <figure class="snip0015" *ngFor="let hall of hall1">
-    <!-- <a href="payment.php"> -->
-      <a (click)="showModal = true">
-      <img src="{{hall.img}}" width="250px" height="150px" />
-      <figcaption>
-        <h2>Зал <br> <span>{{hall.title}}</span></h2>
-        <p>{{hall.places}} мест</p>
-      </figcaption>
-    </a>
-  </figure>
-
-  <div class="adaptive-btn adaptive-btn-top">
-    <div class="vip-btns">
-      <a class="icon" (click)="showModal = true; selectedImg = hall.img" *ngFor="let hall of hall1">
-        <h5>{{hall.title}}</h5>
-        <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
-      </a>
+<div class="vip-blocks">
+  <div>
+    <div class="block-vip first" >
+      <figure class="snip0015" *ngFor="let hall of hall1">
+        <!-- <a href="payment.php"> -->
+          <a (click)="showModal = true">
+          <img src="{{hall.img}}" width="250px" height="150px" />
+          <figcaption>
+            <h2>Зал <br> <span>{{hall.title}}</span></h2>
+            <p>{{hall.places}} мест</p>
+          </figcaption>
+        </a>
+      </figure>
+    
+      <div class="adaptive-btn adaptive-btn-top">
+        <div class="vip-btns">
+          <a class="icon" (click)="showModal = true; selectedImg = hall.img" *ngFor="let hall of hall1">
+            <h5>{{hall.title}}</h5>
+            <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
+          </a>
+        </div>
+      </div>
+    
     </div>
-  </div>
-
-</div>
-
-<div class="block-vip">
-  <figure class="snip0015" *ngFor="let hall of hall2" >
-    <a (click)="showModal = true">
-      <img src="{{hall.img}}" width="250px" height="150px" />
-      <figcaption>
-        <h2>Зал <br> <span>{{hall.title}}</span></h2>
-        <p>{{hall.places}} мест</p>
-      </figcaption>
-    </a>
-  </figure>
-
-  <div class="adaptive-btn">
-    <div class="vip-btns">
-      <a class="icon" (click)="showModal = true; selectedImg = hall.img" *ngFor="let hall of hall2">
-        <h5>{{hall.title}}</h5>
-        <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
-      </a>
+    
+    <div class="block-vip">
+      <figure class="snip0015" *ngFor="let hall of hall2" >
+        <a (click)="showModal = true">
+          <img src="{{hall.img}}" width="250px" height="150px" />
+          <figcaption>
+            <h2>Зал <br> <span>{{hall.title}}</span></h2>
+            <p>{{hall.places}} мест</p>
+          </figcaption>
+        </a>
+      </figure>
+    
+      <div class="adaptive-btn">
+        <div class="vip-btns">
+          <a class="icon" (click)="showModal = true; selectedImg = hall.img" *ngFor="let hall of hall2">
+            <h5>{{hall.title}}</h5>
+            <h5 style="margin-left:auto; margin-right:0;">{{hall.places}} мест </h5>
+          </a>
+        </div>
+      </div>
     </div>
+  
   </div>
 </div>
 

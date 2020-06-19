@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 1040;
   display: block;
-  top: -60%;
+  margin-top: -158px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #0E121B;
@@ -17,7 +17,7 @@
 
 .reserv-vip {
   position: absolute;
-  top: -35%;
+  top: -82px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -49,18 +49,21 @@
 
 }
 
+.vip-blocks{
+  display: flex;
+  justify-content: center;
+  margin-top: 248px;
+}
+
 .block-vip {
   height: auto;
   width: 100%;
   // margin-top: 20%;
-  padding-left: 22%;
+  // padding-left: 22%;
   display: flex;
 
   
 }
-.first{
-      margin-top: 16%;
-    }
 
 figure.snip0015 {
   color: #fff;
@@ -271,11 +274,12 @@ figure:hover {
   width: 600px;
   height: auto;
   position: absolute;
+  top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%); 
   // background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%);
   border: 1px solid rgba(255, 255, 255, 0.9);
   z-index: 10000;
-  left: 35%;
-  top: -15%;
   color: white;
   font-family: 'Cormorant Unicase', serif !important;
   
@@ -285,7 +289,7 @@ figure:hover {
 
   &-form{
     width: 800px;
-    left: 30%;
+    // left: 30%;
 
     .inputs{
       display: flex;

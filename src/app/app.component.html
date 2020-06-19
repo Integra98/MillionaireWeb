@@ -4,7 +4,7 @@
     </mdb-navbar-brand>
     <links>
       <div class="navbar-nav">
-        <a class="nav-item nav-link active waves-light" href="/home" (click)="onClick()" mdbWavesEffect>Главная <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active waves-light" href="/home" (click)="onClick(); cleanLocalStorage()" mdbWavesEffect>Главная <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link waves-light" href="/menu" (click)="onClick()" mdbWavesEffect>Меню</a>
         <a class="nav-item nav-link waves-light" href="/reservation" (click)="onClick()" mdbWavesEffect>Бронь</a>
         <a class="nav-item nav-link waves-light" (click)="scrollIntoViewEvent('events'); onClick()" mdbWavesEffect>События</a>
