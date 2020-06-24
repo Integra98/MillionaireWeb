@@ -275,8 +275,8 @@ figure:hover {
   height: auto;
   position: absolute;
   top:50%; 
-    left:50%; 
-    transform:translate(-50%, -50%); 
+  left:50%; 
+  transform:translate(-50%, -50%); 
   // background: linear-gradient(90deg, #A16327 0%, #EEB75E 98.64%);
   border: 1px solid rgba(255, 255, 255, 0.9);
   z-index: 10000;
@@ -293,7 +293,8 @@ figure:hover {
 
     .inputs{
       display: flex;
-      width: 700px;
+      width: 100%;
+      justify-content: center;
 
       input{
         font-size: 16px;
@@ -328,7 +329,12 @@ figure:hover {
     padding: 40px;
     }
 
+    .modal-window-title{
+      font-weight: bold;
+  
+    }
   }
+
 
   .modal-window-footer{
     padding: 10px 10px 20px 10px;
