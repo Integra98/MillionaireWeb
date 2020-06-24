@@ -132,10 +132,13 @@ export class HomeComponent implements OnInit {
 
   mouseIn(){
     this.mouseover = true;
+    console.log('mouseIn' + this.mouseover );
   }
 
   mouseOut(){
     this.mouseover = false;
+    console.log('mouseOut' + this.mouseover );
+
   }
 
   routeInstagramPage(){
